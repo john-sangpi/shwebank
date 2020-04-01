@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/1b8a27bdd5.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .cus-btn {
+            padding-right: 10px;
+            padding-right: 10px;
+            color: red;
+            display: block;
+        }
+
+        .shadow-inset {
+            -moz-box-shadow: inset 0 0 10px #B8860B;
+            -webkit-box-shadow: inset 0 0 10px #B8860B;
+            box-shadow: inset 0 0 10px #B8860B;
+        }
+    </style>
+    <title>Blife Shwe</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="d-flex align-item-center justify-content-center mt-3 mb-3">
+            <div class="card shadow-inset">
+                <div class="card-body">
+                    <form action="" class="needs-validation" novalidate method="POST">
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label" for="txtReceiverName">Receiver Name:</label>
+                            <div class="input-group col-sm-7">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" required class="form-control" name="txtReceiverName" placeholder="receiver Name"
+                                    id="txtReceiverName">
+                                    <div class="invalid-feedback">Please Enter receiver Name.</div>
+                            </div>
+                        </div>
+                        <% if(delivery != 'SHWE BANK ACCOUNT DEPOSIT'){ %>
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label" for="ddlRelatonship">Receiver is my :</label>
+                            <div class="input-group col-sm-7">
+                                <select class="form-control" id="ddlRelatonship">
+                                    <option>PARENT</option>
+                                    <option>RELATIVE</option>
+                                    <option>FRIEND</option>
+                                </select>
+                            </div>
+                        </div>
+                        <% } %>
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label" for="txtNationalId">Receiver National ID:</label>
+                            <div class="input-group col-sm-7">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fas fa-id-card-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="National ID" required id="txtNationalId">
+                                <div class="invalid-feedback">Please Enter National ID</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label" for="txtMobile">Receiver Mobile
+                                No</label>
+                            <div class="input-group col-sm-7">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fas fa-phone-alt"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Mobile Number" required  id="txtMobile">
+                                <div class="invalid-feedback">Please Enter Mobile Number</div>
+                            </div>
+                        </div>
+                        <% if(delivery != 'SHWE BANK ACCOUNT DEPOSIT'){ %>
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label" for="txtEmail">Receiver Email
+                                Address:</label>
+                            <div class="input-group col-sm-7">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Email Address" required id="txtEmail">
+                                <div class="invalid-feedback">Please Enter Receiver Email</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label" for="inputMethod">Input Method:</label>
+                            <div class="input-group col-sm-7">
+
+                                <select class="mdb-select md-form" id="inputMethod" style="max-width: 250px;">
+                                    <option value="enter">Enter Receiver Address</option>
+                                    <option value="upload">Upload Written/Printed Copy Of Receiver Address </option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="form-group row " id="enterAdd">
+                            <label class="col-sm-5 col-form-label" for="txtAreAddress">Receiver Address: </label>
+                            <div class="input-group col-sm-7">
+                                <textarea class="form-control rounded-1" id="txtAreAddress"  required rows="3"></textarea>
+                                <div class="invalid-feedback">Please fill the address </div>
+                            </div>
+                        </div>
+                        <div class="form-group row" id="uploadAdd">
+                            <label for="uploadAddress" class="col-sm-5 col-form-label">Upload Receiver Address:</label>
+                            <div class="col-sm-7">
+                                <input type="file" class="col-form-label" required id="uploadAddress">
+                                <div class="invalid-feedback">Please upload receiver address </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label" for="selectState">Receiver Residential
+                                State/Division:</label>
+                            <div class="input-group col-sm-7">
+                                <select class="form-control" required id="selectState">
+                                    <option selected disabled value="-1">select </option>
+                                    <option value="1">Kachin State(ကချင်ပြည်နယ်)</option>
+                                    <option value="2">Kayah State(ကယားပြည်နယ်)</option>
+                                    <option value="3">Kayin State(ကရင်ပြည်နယ်)</option>
+                                    <option value="4">Chin State(ချင်းပြည်နယ်)</option>
+                                    <option value="5">Mon State(မွန်ပြည်နယ်)</option>
+                                    <option value="6">Rakhine State(ရခိုင်ပြည်နယ်)</option>
+                                    <option value="7">Shan State(ရှမ်းပြည်နယ်)</option>
+                                    <option value="8">Sagaing Region(စစ်ကိုင်းတိုင်း)</option>
+                                    <option value="9">Taninthayi Region(တနင်္သာရီတိုင်း)</option>
+                                    <option value="10">Bago Region(ပဲခူးတိုင်း)</option>
+                                    <option value="11">Magway Region(မကွေးတိုင်း)</option>
+                                    <option value="12">Yangon Region(ရန်ကုန်တိုင်း)</option>
+                                    <option value="13 ">Ayeyarwady Region(ဧရာဝတီတိုင်း)</option>
+                                    <option value="14">Naga Self-Administered Zone(နာဂကိုယ်ပိုင်အုပ်ချုပ်ဒေသ)</option>
+                                </select>
+                                <div class="invalid-feedback">Please select State/ Division </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label" for="selectTownship">Receiver Residential
+                                Township:</label>
+                            <div class="input-group col-sm-7">
+                                <select class="form-control" id="selectTownship">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-5 col-form-label">Receiver Photo:</label>
+                            <div class="col-sm-7">
+                                <input type="file" class="col-form-label" required id="receierPhoto">
+                                <div class="invalid-feedback">Please upload receiver photo </div>
+                            </div>
+                        </div>
+                        <% } else {%>
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label" for="txtAccOwner">Account Owner Name:</label>
+                                <div class="input-group col-sm-7">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Owner Name" required id="txtAccOwner">
+                                    <div class="invalid-feedback">Please enter account owner </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label" for="txtBankAcc">Bank Account Number</label>
+                                <div class="input-group col-sm-7">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Bank Account" required id="txtBankAcc">
+                                    <div class="invalid-feedback">Please enter bank account </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-5 col-form-label">Receiving Country</label>
+                                <div class="col-sm-7">
+                                  <label class="form-control" style="border: none;">SHWE BANK</label>
+                                </div>
+                              </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label" for="selectBranch">Branch Name</label>
+                                <div class="input-group col-sm-7">
+                                    <select class="form-control" required id="selectBranch">
+                                        <option selected disabled value="-1">SELECT </option>
+                                        <option value="Head Office">Head Office</option>
+                                        <option value="Head Office Branch">Head Office Branch</option>
+                                        <option value="Bayint Naung Branch">Bayint Naung Branch</option>
+                                        <option value="Mandalay Branch">Mandalay Branch</option>
+                                        <option value="Yarzardiyit Branch">Yarzardiyit Branch</option>
+                                        <option value="Shwe Gon Thu Branch">Shwe Gon Thu Branch</option>
+                                        <option value="Daing Wun Kwin Branch">Daing Wun Kwin Branch</option>                                        
+    
+                                    </select>
+                                    <div class="invalid-feedback">Please select branch name </div>
+                                </div>
+                            </div>
+
+                        <% } %>
+
+                        <div class="form-group row ">
+                            <div class="offset-sm-5 col-sm-7 text-right ">
+                                <button type="button" id="back" class="btn btn-primary btn-lg ">Back</button>
+                                <button type="submit" class="btn btn-success btn-lg ">Continue</button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        var listOfTownship = {
+            1: [
+                'Bhamo(Bamaw)(ဗန်းမော်)',
+                'Chipwi(Chibwe)(ချီဗွေ)',
+                'Hopin(ဟိုပင်)',
+                'Hpakant(Hpakan, Farkent)(ဖားကန့်)',
+                'Hsawlaw(Sawlaw)(ဆော့လော်)',
+                'Hsinbo(Sinbo)(ဆင်ဘို)',
+                'Injangyang(အင်ဂျင်းယန်)',
+                'Kamaing(Kamine)(ကာမိုင်း)',
+                'Kawnglanghpu(Kaunglanfu)(ခေါင်လန်ဖူး)',
+                'Lweje(Loije, Lwalgyai)(လွယ်ဂျယ်)',
+                'Machanbaw(မချမ်းဘော)',
+                'Mansi(မန်စီ)',
+                'Moekaung(မိုးကောင်း)',
+                'Mohnyin(မုံးရင်)',
+                'Momauk(မိုးမောက်)',
+                'Myitkyina(မြစ်ကြီးနား)',
+                'Nogmung(Naungmoon)(နောင်မွန်း)',
+                'Pannandin(ပန်းနန်းဒင်)',
+                'Putao(ပူတာအို)',
+                'Shwegu(ရွှေကူ)',
+                'Sumprabum(ဆွမ်ပရာဘွမ်)',
+                'Tanai(Tanain)(တနိုင်း)',
+                'Tsawlaw(Sawlaw)(ဆော့လော်)',
+                'Waingmaw(ဝိုင်းမော်)',
+                'Ywathit(ရွာသစ်)'
+            ],
+            2: [
+                'Bawlakhe(ဘော်လခဲ)',
+                'Demawso(ဒီမောဆိုး)',
+                'Hpasawng(ဖာဆောင်း)',
+                'Loikaw(လွိုင်ကော်)',
+                'Maisal(မယ်စဲ)',
+                'Pruhso(ဖရူဆိုး)',
+                'Shadaw(ရှားတော)'
+            ],
+            3: [
+                'Hlaingbwe (Hlinebwe)(လှိုင်းဘွဲ့)',
+                'Hpa-an(ဖားအံ)',
+                'Kawkareik (Kawkareit)(ကော့ကရိတ်)',
+                'Kyain Seikgyi (Kyainseikkyi)(ကြာအင်းဆိပ်ကြီး)',
+                'Kyeikdon(ကျိုက်ဒုံ)',
+                'Myawaddy (Myawadi)(မြဝတီ)',
+                'Papun (Phapun)(ဖာပွန်)',
+                'Payathonsu (Hpayarthonesu)(ဘုရားသုံးဆူ)',
+                'Thandang(သံတောင်)',
+                'Thandanggyi (Thantaunggyi)(သံတောင်ကြီး)',
+            ],
+            4: [
+                'Falam (Phalam)(ဖလမ်း)',
+                'Hakha (Haka, Harkhar)(ဟားခါး)',
+                'Kanpetlet (Kanpatlat)(ကန်ပက်လက်)',
+                'Matupi (Matupe)(မတူပီ)',
+                'Mindat (Minthet)(မင်းတပ်)',
+                'Paletwa(ပလက်ဝ)',
+                'Tedim(တီးတိန်)',
+                'Thantlang (Htantlang)(ထန်တလန်)',
+                'Tonzang(တွန်းဇံ)',
+            ],
+            5: [],
+            6: [],
+            7: [],
+            8: [],
+            9: [],
+            10: [],
+            11: [],
+            12: [],
+            13: [],
+            14: []
+        }
+        $(function () {
+           
+            $('#inputMethod').change(function () {
+                var ddl = $(this).val();
+                inputFunction(ddl);              
+            })
+
+            $('#selectState').change(function () {
+                var ddlval = $(this).val();
+                var target = $('#selectTownship');
+                target.empty();
+                if (ddlval != '-1') {
+                    var target = $('#selectTownship');
+                    var cities = listOfTownship[ddlval];
+                    var optionResult = $.map(cities, function (val) {
+                        return '<option value="' + val + '">' + val + '</option>'
+                    }).join(' ');
+                    target.html(optionResult);
+                    target.focus();
+                }
+            })
+
+            $('#back').click(function () {
+                window.history.back();
+            })
+
+            
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        
+                    }else{
+                        
+                        // we can perfom db inserting or ajax 
+                    }
+                    form.classList.add('was-validated');
+                    
+                }, false);
+            });
+
+       
+            inputFunction($('#inputMethod').val());
+
+
+        })
+
+        function inputFunction(input){
+                let ddl = input;
+                let divEnter = $('#enterAdd');
+                let divUpload = $('#uploadAdd');
+                let txtArea = $('#txtAreAddress');
+                let photo = $('#uploadAddress');
+
+                if (ddl == "enter") {
+                    txtArea.attr("disabled", false).focus();  
+                    divEnter.removeClass('d-none');             
+                    photo.attr("disabled", true);  
+                    divUpload.addClass('d-none');
+                }
+                if (ddl == "upload") {
+                    divEnter.addClass('d-none');
+                    txtArea.attr("disabled", true);  
+                    divUpload.removeClass('d-none');
+                    photo.attr("disabled", false).focus();                    
+                   
+                }
+        }
+
+    </script>
+</body>
+
+</html>

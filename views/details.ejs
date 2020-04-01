@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/1b8a27bdd5.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .shadow {
+            box-shadow: 3px 3px 1px 6px gold;
+        }
+
+       
+     .row.vdivide [class*='col-']:not(:last-child):after {
+      background: #e0e0e0;
+      width: 1px;
+      content: "";
+      display:block;
+      position: absolute;
+      top:5%;
+      bottom: 0;
+      right: 0;
+      height: 90%;
+    }
+    .h3-t-decor{
+        color:gold;
+        font-style: italic;
+    }
+    
+    .mytable>tbody>tr>td, .mytable>tbody>tr>th, .mytable>tfoot>tr>td, .mytable>tfoot>tr>th, .mytable>thead>tr>td, .mytable>thead>tr>th {
+    padding: 0px;
+}
+.mytable>tbody>tr>td{
+        text-align: left;
+    }
+   
+hr {
+    height: 1px;
+    background-color: blueviolet;
+    padding: 0px;
+    margin:0px;
+    margin-bottom: 1px;
+}
+.flex-box {
+  display:flex;
+  justify-content: flex-end;
+}
+strong{
+    color: red;
+}
+  
+    </style>
+
+    <title>Blife Shwe</title>
+</head>
+
+<body>
+
+    <div class="d-flex align-item-center justify-content-center ">
+        <div class="container">
+            <div class="row vdivide border  border-info rounded mt-5">
+                <div class="col-sm-6 text-center">
+                    <h3 class="h3-t-decor">Receiver Details</h3>
+                    <div class="container">
+                        <div class="row">
+                            <table class="table table-borderless pr-sm-3">                          
+                                <tbody>
+                                  <tr>
+                                    <th scope="row" class="text-right">Sending To:</th>
+                                    <td class="text-left">Sang pi
+                                        <br>Thanphy vaillage
+                                        <br> Tedim
+                                        <br> 0945454545
+                                        <br> blessedangpi@gmail.com
+                                        <br> National id :5/kalahta (N) 266079
+                                        
+                                    </td>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <th class="text-right" scope="row" class="text-right">Disbursement Method:</th>
+                                    <td class="text-left" >HOME DELIVERY</td>
+                                    
+                                  </tr>
+                                
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <h3 class="h3-t-decor mb-4">Payment Details</h3>                    
+                    <div class="container">
+                        <div class="row">
+                            <table class="table mytable table-borderless" >
+                                <tbody>
+                                    <tr >
+                                      <th  class="text-right">Sending Amont:</th>
+                                      <td >&nbsp;<strong>SGD</strong><span id="spSendAmt"></span></td>                                  
+                                    </tr>
+                                    <tr>
+                                        <th  class="text-right">Transfer Fee:</th>
+                                      <td> &nbsp;<strong>SGD</strong><span id="spTransferFee"></span></td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-right">Delivery Charges: </th>
+                                      <td>&nbsp;<strong>SGD</strong> <span id="spDeliveryCharge"></span></td>                                    
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"> <hr> </td>
+                                    </tr>
+                                   
+                                    <tr>
+                                        <th scope="row" class="text-right">Total Delivery:</th>
+                                        <td>&nbsp;<strong>SGD</strong><span id="spTotalDelivery"></span></td>                                    
+                                      </tr>
+                                      <tr>
+                                        <th scope="row" class="text-right">Exchange Rate:</th>
+                                        <td>&nbsp;<span id="spExcRate">1.0 SGD = 931.0 MMK</span></td>                                    
+                                      </tr>
+                                      <tr>
+                                        <th scope="row" class="text-right">Exchange Rate On:</th>
+                                        <td>&nbsp;<span id="spExcRateOn"></span></td>                                    
+                                      </tr>
+                                      <tr>
+                                        <th scope="row" class="text-right">Receive Amount:</th>
+                                        <td>&nbsp;<strong>MMK</strong> <span id="spReceiveAmt">90000</span></td>                                    
+                                      </tr>
+                                  </tbody>
+                            </table>
+                           
+                        </div>
+                        <div class="flex-box mb-5">
+                            <button id="btnBack" class="pull-right btn btn-info mr-2 ">Back</button>
+                            <button id="btnContinue" class=" pull-right btn btn-success">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+
+
+
+    var d = new Date();
+   $('#spExcRateOn').html(`${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`);
+        $('#btnBack').click(function () {
+            window.history.back();
+        })
+        $('#btnContinue').click(function(){          
+            window.location.href ="http://localhost:1337/step";
+        })
+
+    </script>
+</body>
+
+</html>
