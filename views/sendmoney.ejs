@@ -39,9 +39,9 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" required class="form-control" name="txtReceiverName" placeholder="receiver Name"
-                                    id="txtReceiverName">
-                                    <div class="invalid-feedback">Please Enter receiver Name.</div>
+                                <input type="text" required class="form-control" name="txtReceiverName"
+                                    placeholder="receiver Name" id="txtReceiverName">
+                                <div class="invalid-feedback">Please Enter receiver Name.</div>
                             </div>
                         </div>
                         <% if(delivery != 'SHWE BANK ACCOUNT DEPOSIT'){ %>
@@ -63,7 +63,8 @@
                                     <span class="input-group-text" id="basic-addon1"><i
                                             class="fas fa-id-card-alt"></i></span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="National ID" required id="txtNationalId">
+                                <input type="text" class="form-control" placeholder="National ID" required
+                                    id="txtNationalId">
                                 <div class="invalid-feedback">Please Enter National ID</div>
                             </div>
                         </div>
@@ -75,7 +76,8 @@
                                     <span class="input-group-text" id="basic-addon1"><i
                                             class="fas fa-phone-alt"></i></span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Mobile Number" required  id="txtMobile">
+                                <input type="text" class="form-control" placeholder="Mobile Number" required
+                                    id="txtMobile">
                                 <div class="invalid-feedback">Please Enter Mobile Number</div>
                             </div>
                         </div>
@@ -85,9 +87,11 @@
                                 Address:</label>
                             <div class="input-group col-sm-7">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fas fa-envelope"></i></span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Email Address" required id="txtEmail">
+                                <input type="text" class="form-control" placeholder="Email Address" required
+                                    id="txtEmail">
                                 <div class="invalid-feedback">Please Enter Receiver Email</div>
                             </div>
                         </div>
@@ -105,7 +109,8 @@
                         <div class="form-group row " id="enterAdd">
                             <label class="col-sm-5 col-form-label" for="txtAreAddress">Receiver Address: </label>
                             <div class="input-group col-sm-7">
-                                <textarea class="form-control rounded-1" id="txtAreAddress"  required rows="3"></textarea>
+                                <textarea class="form-control rounded-1" id="txtAreAddress" required
+                                    rows="3"></textarea>
                                 <div class="invalid-feedback">Please fill the address </div>
                             </div>
                         </div>
@@ -135,7 +140,7 @@
                                     <option value="10">Bago Region(ပဲခူးတိုင်း)</option>
                                     <option value="11">Magway Region(မကွေးတိုင်း)</option>
                                     <option value="12">Yangon Region(ရန်ကုန်တိုင်း)</option>
-                                    <option value="13 ">Ayeyarwady Region(ဧရာဝတီတိုင်း)</option>
+                                    <option value="13">Ayeyarwady Region(ဧရာဝတီတိုင်း)</option>
                                     <option value="14">Naga Self-Administered Zone(နာဂကိုယ်ပိုင်အုပ်ချုပ်ဒေသ)</option>
                                 </select>
                                 <div class="invalid-feedback">Please select State/ Division </div>
@@ -158,50 +163,52 @@
                             </div>
                         </div>
                         <% } else {%>
-                            <div class="form-group row">
-                                <label class="col-sm-5 col-form-label" for="txtAccOwner">Account Owner Name:</label>
-                                <div class="input-group col-sm-7">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Owner Name" required id="txtAccOwner">
-                                    <div class="invalid-feedback">Please enter account owner </div>
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label" for="txtAccOwner">Account Owner Name:</label>
+                            <div class="input-group col-sm-7">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-tie"></i></span>
                                 </div>
+                                <input type="text" class="form-control" placeholder="Owner Name" required
+                                    id="txtAccOwner">
+                                <div class="invalid-feedback">Please enter account owner </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-5 col-form-label" for="txtBankAcc">Bank Account Number</label>
-                                <div class="input-group col-sm-7">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Bank Account" required id="txtBankAcc">
-                                    <div class="invalid-feedback">Please enter bank account </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label" for="txtBankAcc">Bank Account Number</label>
+                            <div class="input-group col-sm-7">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-money-check-alt fa-sm"></i></span>
                                 </div>
+                                <input type="text" class="form-control" placeholder="Bank Account" required
+                                    id="txtBankAcc">
+                                <div class="invalid-feedback">Please enter bank account </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="" class="col-sm-5 col-form-label">Receiving Country</label>
-                                <div class="col-sm-7">
-                                  <label class="form-control" style="border: none;">SHWE BANK</label>
-                                </div>
-                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-5 col-form-label">Receiving Country</label>
+                            <div class="col-sm-7">
+                                <label class="form-control" style="border: none;">SHWE BANK</label>
+                            </div>
+                        </div>
 
-                            <div class="form-group row">
-                                <label class="col-sm-5 col-form-label" for="selectBranch">Branch Name</label>
-                                <div class="input-group col-sm-7">
-                                    <select class="form-control" required id="selectBranch">
-                                        <option selected disabled value="-1">SELECT </option>
-                                        <option value="Head Office">Head Office</option>
-                                        <option value="Head Office Branch">Head Office Branch</option>
-                                        <option value="Bayint Naung Branch">Bayint Naung Branch</option>
-                                        <option value="Mandalay Branch">Mandalay Branch</option>
-                                        <option value="Yarzardiyit Branch">Yarzardiyit Branch</option>
-                                        <option value="Shwe Gon Thu Branch">Shwe Gon Thu Branch</option>
-                                        <option value="Daing Wun Kwin Branch">Daing Wun Kwin Branch</option>                                        
-    
-                                    </select>
-                                    <div class="invalid-feedback">Please select branch name </div>
-                                </div>
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label" for="selectBranch">Branch Name</label>
+                            <div class="input-group col-sm-7">
+                                <select class="form-control" required id="selectBranch">
+                                    <option selected disabled value="-1">SELECT </option>
+                                    <option value="Head Office">Head Office</option>
+                                    <option value="Head Office Branch">Head Office Branch</option>
+                                    <option value="Bayint Naung Branch">Bayint Naung Branch</option>
+                                    <option value="Mandalay Branch">Mandalay Branch</option>
+                                    <option value="Yarzardiyit Branch">Yarzardiyit Branch</option>
+                                    <option value="Shwe Gon Thu Branch">Shwe Gon Thu Branch</option>
+                                    <option value="Daing Wun Kwin Branch">Daing Wun Kwin Branch</option>
+
+                                </select>
+                                <div class="invalid-feedback">Please select branch name </div>
                             </div>
+                        </div>
 
                         <% } %>
 
@@ -279,7 +286,7 @@
                 'Papun (Phapun)(ဖာပွန်)',
                 'Payathonsu (Hpayarthonesu)(ဘုရားသုံးဆူ)',
                 'Thandang(သံတောင်)',
-                'Thandanggyi (Thantaunggyi)(သံတောင်ကြီး)',
+                'Thandanggyi (Thantaunggyi)(သံတောင်ကြီး)'
             ],
             4: [
                 'Falam (Phalam)(ဖလမ်း)',
@@ -290,24 +297,302 @@
                 'Paletwa(ပလက်ဝ)',
                 'Tedim(တီးတိန်)',
                 'Thantlang (Htantlang)(ထန်တလန်)',
-                'Tonzang(တွန်းဇံ)',
+                'Tonzang(တွန်းဇံ)'
             ],
-            5: [],
-            6: [],
-            7: [],
-            8: [],
-            9: [],
-            10: [],
-            11: [],
-            12: [],
-            13: [],
-            14: []
+            5: [
+                'Bilin(ဘီးလင်း)',
+                'Chaungzon(ကျိုက်မရော)',
+                'Kyaikkami(သံဖြူဇရပ်)',
+                'Kyaikmaraw(ကျိုက်မရော)',
+                'Kyaikto(ကျိုက်ထို)',
+                'Mawlamyaing(Moulmein)(မော်လမြိုင်)',
+                'Mottama(မုတ္တမ)',
+                'Mudon(မုဒုံ)',
+                'Paung(ပေါင်)',
+                'Thanbyuzayat(သံဖြူဇရပ်)',
+                'Thaton(သထုံ)',
+                'Ye(ရေး)'
+            ],
+            6: [
+                'Ann(အမ်း)',
+                'Buthidaung(ဘူးသီးတောင်)',
+                'Dalet(Dalat)(ဒါးလက်)',
+                'Gwa(ဂွ)',
+                'Kyaukpyu(ကျောက်ဖြူ)',
+                'Kyauktaw(ကျောက်တော်)',
+                'Kyeintali(ကျိန္တလီ)',
+                'ManAung(မာန်အောင်)',
+                'Maungdaw(မောင်းတော)',
+                'Minbya(မင်းပြား)',
+                'Myauk - U(မြောက်ဦး)',
+                'Myebon(မြေပုံ)',
+                'Ngapali(ငပလီ)',
+                'Pauktaw(ပေါက်တော)',
+                'Ponnagyun(ပုဏ္ဏားကျွန်း)',
+                'Ramree(ရမ်ဗြဲ)',
+                'Rathedaung(ရသေ့တောင်)',
+                'Sittwe(စစ်တွေ)',
+                'Thandwe(သံတွဲ)',
+                'Toungup(တောင်ကုတ်)'
+            ],
+            7: [
+
+                'Aungban(အောင်ပန်း)',
+                'Ayetharyar(အေးသာယာ)',
+                'Chinshwehaw(ချင်းရွှေဟော်)',
+                'Ho - pin(ဟိုပင်)',
+                'Hopang(ဟိုပန်)',
+                'Hopong(ဟိုပုန်း)',
+                'Hseni(null)',
+                'Hsi Hseng(ဆီဆိုင်)',
+                'Hsipaw(သီပေါ)',
+                'Kalaw(ကလော)',
+                'Kengtong(ကျိုင်းတုံ)',
+                'Kunhing(ကွန်ဟိန်း)',
+                'Kunlong(ကွမ်းလုံ)',
+                'Kutkai(ကွတ်ခိုင်)',
+                'Kyaukme(ကျောက်မဲ)',
+                'Kyethi(ကျေးသီး)',
+                'Lai - Hka(လွယ်ခါး)',
+                'Langkho(null)',
+                'Lashio(လားရှိုး)',
+                'Laukkaing(လွယ်လင်)',
+                'Lawksawk(ရပ်စောက်)',
+                'Loilen(လားရှိုး)',
+                'Mabein(မဘိမ်း)',
+                'Mantong(မန်တုံ)',
+                'Mawkmai(မောက်မယ်)',
+                'Mine Hpayak(null)',
+                'Mine Hsat(မိုင်းဆတ်)',
+                'Mine Hsu(မိုင်းရှူး)',
+                'Mine Khet(မိုင်းခတ်)',
+                'Mine Kung(null)',
+                'Mine Nai(null)',
+                'Mine Pan(မိုင်းပန်)',
+                'Mine Ping(မိုင်းပင်)',
+                'Mine Tong(မိုင်းတောင်း)',
+                'Mine Yang(မိုင်းယန်)',
+                'Mine Yawng(မိုင်းယောင်း)',
+                'Mineko(မုန်းကိုး)',
+                'Minemit(null)',
+                'Mineyai(မိုင်းရယ်)',
+                'Mu Se(မူဆယ်)',
+                'Namhsan(နမ့်ဆန်)',
+                'Namtu(နမ္မတူ)',
+                'Nanhkan(နမ့်ခမ်း)',
+                'Nansang(null)',
+                'Nawnghkio(null)',
+                'Nyaungshwe(ညောင်ရွှေ)',
+                'Pang Long(ပန်လုံ)',
+                'Pekon(ဖယ်ခုံ)',
+                'Pindaya(ပင်းဒယ)',
+                'Pinlaung(ပင်လောင်း)',
+                'Tant Yan(တန့်ယန်း)',
+                'Taunggyi(တောင်ကြီး)',
+                'Techilelk(တာချီလိတ်)',
+                'Ywangan(ရွာငံ)'
+            ],
+            8: [
+                'Ayadaw(အရာတော်)',
+                'Banmauk(ဗန်းမောက်)',
+                'Budalin(ဘုတလင်)',
+                'Chaung-U(ချောင်းဦး)',
+                'Dabayin(ဒီပဲယင်း)',
+                'Hkamti(ခန္တီး)',
+                'Homalin(ဟုမ္မလင်း)',
+                'Htigyaing(ထီးချိုင့်)',
+                'Indaw(အင်းတော်)',
+                'Kalaymyo(ကလေးမြို့)',
+                'Kalewa(ကလေးဝ)',
+                'Kanbalu(ကန့်ဘလူ)',
+                'Kani(ကနီ)',
+                'Katha(ကသာ)',
+                'Kawlin(ကောလင်း)',
+                'Khin U(ခင်ဦး)',
+                'KyaTet(ကျားတက်)',
+                'Kyunhla(ကျွန်းလှ)',
+                'Mawlaik(မော်လိုက်)',
+                'Mingun(မင်းကွန်း)',
+                'Monywa(မုံရွာ)',
+                'Myaung(မြောင်)',
+                'Myinmu(မြင်းမူ)',
+                'Pale(ပုလဲ)',
+                'Paungbyin(ဖောင်းပြင်)',
+                'Pinlebu(ပင်လယ်ဘူး)',
+                'Sagaing(စစ်ကိုင်း)',
+                'Salingyi(စလင်းကြီး)',
+                'Shwebo(ရွှေဘို)',
+                'Tamu(တမူး)',
+                'Tantsal(တန့်ဆည်)',
+                'Wetlet(ဝက်လက်)',
+                'Wuntho(ဝန်းသို)',
+                'Ye-U(ရေဦး)',
+                'Yinmabin(ယင်းမာပင်)'
+
+            ],
+            9: [
+                'Bokpyin(ဘုတ်ပြင်း)',
+                'Dawei(ထားဝယ်)',
+                'Kawthoung(ကော့သောင်း)',
+                'Kyunsu(ကျွန်းစု)',
+                'Launglon(လောင်းလုံ)',
+                'Myeik(မြိတ်)',
+                'Palaw(ပလော)',
+                'Taninthayi(တနင်္သာရီ)',
+                'Thayetchaung(သရက်ချောင်း)',
+                'Yebyu(ရေဖြူ)'
+            ],
+            10: [
+
+                'Daik-U(ဒိုက်ဦး)',
+                'Gyobingauk(ကြို့ပင်ကောက်)',
+                'Htantabin(ထန်းတပင်)',
+                'Kawa(ကဝ)',
+                'Kututmatyi(ကေတုမတီ)',
+                'Kyaukkyi(ကျောက်ကြီး)',
+                'Kyauktaga(ကျောက်တခါး)',
+                'Letpadan(လက်ပံတန်း)',
+                'Madauk(မဒေါက်)',
+                'Minhla(မင်းလှ)',
+                'Monyo(မိုးညို)',
+                'Nattalin(နတ္တလင်း)',
+                'Nyaunglebin(ညောင်လေးပင်)',
+                'Okpo(အုတ်ဖို)',
+                'Oktwin(အုတ်တွင်း)',
+                'Padaung(ပန်းတောင်း)',
+                'Paukkhaung(ပေါက်ခေါင်း)',
+                'Paungde(ပေါင်းတည်)',
+                'Pennwegone(ပဲနွယ်ကုန်း)',
+                'Phyu(ဖြူး)',
+                'Pyay (formerly Prome)(ပြည်)',
+                'Pyuntaza(ပြွန်တံဆာ)',
+                'Shwedaung(ရွှေတောင်)',
+                'Shwegyin(ရွှေကျင်)',
+                'Taungoo(တောင်ငူ)',
+                'Thanatpin(သနပ်ပင်)',
+                'Thayarwaddy(သာယာဝတီ)',
+                'Thegon(သဲကုန်း)',
+                'Thonze(သုံးဆယ)',
+                'Waw(ဝေါ)',
+                'Yaytarshay(ရေတာရှည်)',
+                'Zigon(ဇီးကုန်း)'
+            ],
+            11: [
+                'AungLan(အောင်လံ)',
+                'Chauck(ချောက်)',
+                'Gangaw(ဂန့်ဂေါ)',
+                'HtiLin(ထီးလင်း)',
+                'Kamma(ကမ္မ)',
+                'Magway(မကွေး)',
+                'Minbu(မင်းဘူး)',
+                'Mindon(မင်းတုန်း)',
+                'Minhla(မင်းလှ)',
+                'Myaing(မြိုင်)',
+                'Myothit(မြို့သစ်)',
+                'Natmauk(နတ်မောက်)',
+                'Ngape(ငဖဲ)',
+                'Pakokku(ပခုက္ကူ)',
+                'Pauk(ပေါက်)',
+                'Pwintbyu(ပွင့်ဖြူ)',
+                'Sagu(စကု)',
+                'Salin(စလင်း)',
+                'Seikphyu(ဆိပ်ဖြူ)',
+                'Sidoktaya(စေတုတ္တရာ)',
+                'Sinbyugyun(ဆင်ဖြူကျွန်း)',
+                'Swar(ဆွာ)',
+                'Taungdwingyi(တောင်တွင်းကြီး)',
+                'Thayet (Thayetmyo)(သရက်)',
+                'Yenangyaung(ရေနံချောင်း)',
+                'Yesagyo(ရေစကြို)'
+
+            ],
+            12: [
+                'AhLon(အလုံ)',
+                'BaHan(ဗဟန်း)',
+                'BoTaTaung(ဗိုလ်တထောင်)',
+                'DaGon(ဒဂုံ)',
+                'Dagon (Eastern)(ဒဂုံမြို့သစ် (အရှေ့ပိုင်း))',
+                'Dagon (Northern)(ဒဂုံမြို့သစ်(မြောက်ပိုင်း))',
+                'Dagon (Southern)(ဒဂုံမြို့သစ်(တောင်ပိုင်း))',
+                'Dala(ဒလ)',
+                'DawPon(ဒေါပုံ)',
+                'HlaiKoo(လှည်းကူး)',
+                'Hlaing(လှိုင်)',
+                'Hlaingthayar(လှိုင်သာယာ)',
+                'Hmawbi(မှော်ဘီ)',
+                'Htantabin(ထန်းတပင်)',
+                'Insein(အင်းစိန်)',
+                'KaMarYet(ကမာရွတ်)',
+                'Kawhmu(ကော့မှူး)',
+                'Khayan(ခရမ်း)',
+                'KokoKyun(ကိုးကိုးကျွန်း)',
+                'Kwanchankone(ကွမ်းခြံကုန်း)',
+                'Kyauktada(ကျောက်တံတား)',
+                'Kyauktan(ကျောက်တန်း)',
+                'KyiMyinDaing(ကြည့်မြင်တိုင်)',
+                'Lanmataw(လမ်းမတော်)',
+                'Latha(လသာ)',
+                'MaYanKone(မရမ်းကုန်း)',
+                'Mingalar TaungNyunt(မင်္ဂလာတောင်ညွန့်)',
+                'Mingalardon(မင်္ဂလာဒုံ)',
+                'North Okkalapa(မြောက်ဥက္ကလာပ)',
+                'PanBeTan(ပန်းဘဲတန်း)',
+                'PaZunTaung(ပုဇွန်တောင်)',
+                'SanChaung(စမ်းချောင်း)',
+                'SeikKam(ဆိပ်ကမ်း)',
+                'Seikkyikhanaungto(ဆိပ်ကြီးခနောင်တို)',
+                'Shwepyithar(ရွှေပြည်သာ)',
+                'South Okkalapa(တောင်ဥက္ကလာပ)',
+                'TaikKyi(တိုက်ကြီး)',
+                'TawMwe(တာမွေ)',
+                'Thanlyin(သန်လျင်)',
+                'TharKeTa(သာကေတ)',
+                'Thonekhwa(သုံးခွ)',
+                'TinGanKyun(သင်္ဃန်းကျွန်း)',
+                'Tontay(တွံတေး)',
+                'YanKin(ရန်ကင်း)'
+            ],
+            13: [
+                'Bogale(ဘိုကလေး)',
+                'Danubyu(ဓနုဖြူ)',
+                'Dedaye(ဒေးဒရဲ)',
+                'Einme(အိမ်မဲ)',
+                'Haigyi Island(ဟိုင်းကြီးကျွန်း)',
+                'Hinthada(ဟင်္သာတ)',
+                'Ingapu(အင်္ဂပူ)',
+                'Kanaung(ကနောင်)',
+                'Kangyidaut(ကန်ကြီးဒေါင့်)',
+                'Kyaiklat(ကျိုက်လပ်)',
+                'Kyangin(ကြံခင်း)',
+                'Kyaunggon(ကျောင်းကုန်း)',
+                'Kyohnpyaw(ကျုံပျော်)',
+                'Laymyethna(လေးမျက်နှာ)',
+                'Letputta(လပွတ္တာ)',
+                'Maubin(မအူပင်)',
+                'Mawlamyinegyun(မော်လမြိုင်ကျွန်း)',
+                'Myan Aung(မြန်အောင်)',
+                'Myaungmya(မြောင်းမြ)',
+                'Ngapudaw(ငပုတော)',
+                'Nyaungdon(ညောင်တုန်း)',
+                'Pantanaw(ပန်းတနော်)',
+                'Pathein(Basein)(ပုသိမ်)',
+                'Pyapon(ဖျာပုံ)',
+                'Thabaung(သာပေါင်း)',
+                'Wakema(ဝါးခယ်မ)',
+                'Yekyi(ရေကြည်)',
+                'Zalun(ဇလွန်)'
+            ],
+            14: [
+                'Lahe(လဟယ်)',
+                'Leshi(လေရှီး)',
+                'Nanyun(နမ်းယွန်း)'
+            ]
         }
         $(function () {
-           
+
             $('#inputMethod').change(function () {
                 var ddl = $(this).val();
-                inputFunction(ddl);              
+                inputFunction(ddl);
             })
 
             $('#selectState').change(function () {
@@ -315,7 +600,6 @@
                 var target = $('#selectTownship');
                 target.empty();
                 if (ddlval != '-1') {
-                    var target = $('#selectTownship');
                     var cities = listOfTownship[ddlval];
                     var optionResult = $.map(cities, function (val) {
                         return '<option value="' + val + '">' + val + '</option>'
@@ -329,7 +613,7 @@
                 window.history.back();
             })
 
-            
+
             var forms = document.getElementsByClassName('needs-validation');
             // Loop over them and prevent submission
             var validation = Array.prototype.filter.call(forms, function (form) {
@@ -338,42 +622,42 @@
                     if (form.checkValidity() === false) {
                         event.preventDefault();
                         event.stopPropagation();
-                        
-                    }else{
-                        
+
+                    } else {
+
                         // we can perfom db inserting or ajax 
                     }
                     form.classList.add('was-validated');
-                    
+
                 }, false);
             });
 
-       
+
             inputFunction($('#inputMethod').val());
 
 
         })
 
-        function inputFunction(input){
-                let ddl = input;
-                let divEnter = $('#enterAdd');
-                let divUpload = $('#uploadAdd');
-                let txtArea = $('#txtAreAddress');
-                let photo = $('#uploadAddress');
+        function inputFunction(input) {
+            let ddl = input;
+            let divEnter = $('#enterAdd');
+            let divUpload = $('#uploadAdd');
+            let txtArea = $('#txtAreAddress');
+            let photo = $('#uploadAddress');
 
-                if (ddl == "enter") {
-                    txtArea.attr("disabled", false).focus();  
-                    divEnter.removeClass('d-none');             
-                    photo.attr("disabled", true);  
-                    divUpload.addClass('d-none');
-                }
-                if (ddl == "upload") {
-                    divEnter.addClass('d-none');
-                    txtArea.attr("disabled", true);  
-                    divUpload.removeClass('d-none');
-                    photo.attr("disabled", false).focus();                    
-                   
-                }
+            if (ddl == "enter") {
+                txtArea.attr("disabled", false).focus();
+                divEnter.removeClass('d-none');
+                photo.attr("disabled", true);
+                divUpload.addClass('d-none');
+            }
+            if (ddl == "upload") {
+                divEnter.addClass('d-none');
+                txtArea.attr("disabled", true);
+                divUpload.removeClass('d-none');
+                photo.attr("disabled", false).focus();
+
+            }
         }
 
     </script>
